@@ -3,6 +3,7 @@ window.onload = function(){
 	initial();
 	allchoice();
 	out();
+	begin();
 }
 
 
@@ -13,6 +14,7 @@ var nall = document.getElementById('nall');
 var delet = document.getElementById('delet');
 var add = document.getElementById('add');
 var back = document.getElementById('back');
+var check = document.getElementsByClassName('checkbox');
 
 function addtr()  //添加选项
 {
@@ -84,16 +86,36 @@ function allchoice() //全选或全不选
 
 function out() //删除功能
 {
-	var check = document.getElementsByClassName('checkbox');
 	delet.onclick = function()
 	{
-		for(var i = check.length-1; i >= 0; i--)
+		for(var i = check.length-1; i >= 0; i --)
 		{
 			if(check[i].checked == true)
 			{
-				parent = tr[i].parentNode; //tr代表每个选项
-				parent.removeChild(parent.getElementsByTagName('tr')[i]);
+				del(i);
 			}
 		}
+	}
+}
+
+function del(index)
+{
+	parent = tr[index].parentNode; //tr代表每一栏
+	parent.removeChild(parent.getElementsByTagName('tr')[index]);
+}
+
+function begin()
+{
+	back.onclick = function()
+	{
+		for(var i = check.length-1; i >= 0; i--) //删除现有的所有选项
+		{
+			del(i);
+		}	
+		for(var i = 0; i <5; i++) //重新创建五个选项出来
+		{
+			addtr();
+		}
+		initial();  //进行初始化
 	}
 }
