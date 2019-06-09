@@ -1,0 +1,122 @@
+html{
+	font-size: 16px;
+}
+.header{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.header>div,.header>ul{
+	display: inline-block;
+	margin-bottom: 0;
+}
+.logo{
+	font-size: 1.5rem;
+	margin-left: 2rem;
+}
+.logo:before{
+	content: "";
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-image: url(images/book.png);
+	background-size: 100% 100%;
+	vertical-align: middle;
+	margin-right: 0.3rem;
+}
+.header>ul{
+	margin-right: 2rem;
+}
+.header li{
+	display: inline-block;
+	padding: 0 1rem 0.6rem 1rem;
+	border-width: 0 0 0.2rem 0;
+	border-style: solid;
+	border-color: transparent;
+}
+.header li:hover{
+	cursor: pointer;
+	color: rgb(239, 139, 137);
+	border-color: rgb(239, 139, 137);
+}
+.login{
+	color: rgb(239, 139, 137);
+}
+.login:before{
+	content: "";
+	display: inline-block;
+	width: 1rem;
+	height: 1.2rem;
+	background-image: url(images/登录.png);
+	background-size: 100% 100%;
+	vertical-align: middle;
+	margin-right: 0.3rem;
+}
+.banner{
+	height: 35rem;
+	background-size: 100% 100%;
+	background-image: url(images/banner.jpg);
+}
+.summary{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows:70% 30%;
+	height: 10rem;
+	margin-bottom: 3rem;
+}
+.summary p{
+	width: 55%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.85rem;
+	margin-top: 0;
+	color: rgb(140, 140, 140);
+}
+.summary>div{
+	position: relative;
+}
+.summary img{
+	display: block;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.summary_item5,.summary_item6,.summary_item7{
+	border-color: rgb(177, 177, 177);
+	border-style: solid;
+	border-width: 0 0.1rem 0 0;
+}
+.about{
+	height: 18rem;
+	background-color: rgb(237, 237, 237);
+	position: relative;
+}
+.about div{
+	width: 60%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 60%;
+}
+.about img{
+	display: block;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 6rem;
+	height: 6rem;
+}
+.about p{
+	font-size: 2rem;
+	color: rgb(161, 161, 161);
+	text-align: center;
+	letter-spacing: 0.2rem;
+}
