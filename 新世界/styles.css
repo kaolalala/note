@@ -1,6 +1,55 @@
 html{
 	font-size: 16px;
 }
+*{
+	font-size: 1rem;
+}
+@media screen and (min-width: 1579px) {
+	html{
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 1684px) {
+	html{
+		font-size: 22px;
+	}
+}
+@media screen and (min-width: 1894px) {
+	html{
+		font-size: 25px;
+	}
+}
+@media screen and (min-width: 2526px){
+	html{
+		font-size: 35px;
+	}
+}
+@media screen and (min-width: 3790px) {
+	html{
+		font-size: 50px;
+	}
+}
+@media screen and (min-width: 5053px) {
+	html{
+		font-size: 62px;
+	}
+}
+@media screen and (max-width: 850px) {
+	html{
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 510px) {
+	html{
+		font-size: 5px;
+	}
+}
+.geryfont{
+	color: rgb(142, 142, 142);
+}
+.smallFont{
+	font-size: 0.8rem;
+}
 .header{
 	display: flex;
 	flex-direction: row;
@@ -54,9 +103,37 @@ html{
 	margin-right: 0.3rem;
 }
 .banner{
+	width: 100%;
 	height: 35rem;
+	position: relative;
 	background-size: 100% 100%;
 	background-image: url(images/banner.jpg);
+}
+.banner>div{
+	height: 50%;
+	position: absolute;
+	margin-bottom: auto;
+	margin-top: auto;
+	top: 0;
+	bottom: 0;
+	left: 10%;
+}
+.banner>div>div{
+	width: 50%;
+	height: 3rem;
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 0.4rem;
+	box-sizing: border-box;
+	margin-top: 3rem;
+	background-color: rgb(231, 79, 76);
+}
+.banner p.bigfont{
+	font-size: 4rem;
+	line-height: 0;
+}
+.banner p.small{
+	width: 50%;
 }
 .summary{
 	display: grid;
@@ -85,6 +162,8 @@ html{
 	right: 0;
 	top: 0;
 	bottom: 0;
+	width: 1.5rem;
+	height: 1.5rem;
 }
 .summary_item5,.summary_item6,.summary_item7{
 	border-color: rgb(177, 177, 177);
@@ -119,4 +198,407 @@ html{
 	color: rgb(161, 161, 161);
 	text-align: center;
 	letter-spacing: 0.2rem;
+}
+.search{
+	height: 18rem;
+	background-image: url(images/看地图.jpg);
+	background-size: 100% 100%;
+}
+.red{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(170, 53, 51, 0.2);
+	display: grid;
+	grid-template-columns: 10% repeat(4,1fr) 10%;
+	grid-template-rows: 50% 50%;
+	grid-template-areas: ". . a a . ."
+					 	 ". nation province city search .";
+	justify-items: center;
+}
+.word{
+	grid-column-start: a-start;
+	grid-column-end: a-end;
+	align-self:center;
+}
+.word p{
+	text-align: center;
+	color: white;
+}
+.red select{
+	outline: none;
+	width: 100%;
+	height: 2rem;
+}
+.red option{
+	height: 2rem;
+	background-color: rgb(227, 227, 229);
+}
+.nation{
+	width: 85%;
+	grid-column-start: nation-start;
+	grid-column-end: nation-end;
+}
+.province{
+	width: 85%;
+	grid-column-start: province-start;
+	grid-column-end: province-end;
+}
+.city{
+	width: 85%;
+	grid-column-start: city-start;
+	grid-column-end: city-end;
+}
+.find{
+	font-size: 1.5rem;
+}
+.red_search div{
+	display: table-cell;
+	vertical-align: middle;
+}
+.red_search{
+	display: table;
+	background-color: rgb(190, 79, 72);
+	color: white;
+	width: 85%;
+	height: 2rem;
+	text-align: center;
+}
+.activities{
+	height: 30rem;
+	background-color: rgb(247, 247, 247);
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: 12% repeat(4,1fr) 12%;
+	grid-template-rows: 100%;
+	grid-template-areas: ". beijing shanghai shenzhen xianggang .";
+}
+.activities p{
+	text-align: center;
+}
+.activities>div{
+	width: 90%;
+	height: 75%;
+}
+.beijing>div, .shenzhen>div, .shanghai>div, .xianggang>div{
+	background-color: white;
+	height: 80%;
+	width: 95%;
+	padding-top: 5%;
+}
+.activities img{
+	width: 90%;
+	display: block;
+	margin: auto;
+	left: 0;
+	right: 0;
+	height: 95%;
+}
+.beijing{
+	grid-column-start: beijing-start;
+	grid-column-end: beijing-end;
+}
+.shanghai{
+	grid-column-start: shanghai-start;
+	grid-column-end: shanghai-end;
+}
+.shenzhen{
+	grid-column-start: shenzhen-start;
+	grid-column-end: shenzhen-end;
+}
+.xianggang{
+	grid-column-start: xianggang-start;
+	grid-column-end: xianggang-end;
+}
+.new{
+	height: 65rem;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 50% 50%;
+	grid-template-areas: "time time more"
+						 "red white women";
+	margin-top: 2rem;
+}
+.time{
+	grid-column-start: time-start;
+	grid-column-end: time-end;
+	background-image: url(images/time.jpg);
+	background-size: 100% 100%;
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.time>div{
+	height: 60%;
+}
+.time p{
+	width: 50%;
+	text-align: center;
+	margin-top: 0.5rem;
+}
+.fullred{
+	background-color: rgb(231, 79, 77);
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.fullwhite{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.woman{
+	background-image: url(images/women.jpg);
+	background-size: 100% 100%;
+	position: relative;
+}
+.black{
+	background-color: rgba(0,0,0,0.4);
+	height: 100%;
+	width: 100%;
+}
+.footer{
+	height: 20rem;
+	background-color: rgb(50, 53, 62);
+}
+.vertical_center{
+	display: table-cell;
+	vertical-align: middle;
+}
+.fullred>div,.fullwhite>div{
+	height: 50%;
+	letter-spacing: 0.1rem;
+}
+.fullred>div>p,.fullwhite>div>p{
+	width: 50%;
+}
+.fullred>div>div,.fullwhite>div>div{
+	width: 30%;
+	padding: 0.4rem;
+	margin-top: 0.6rem;
+}
+.justify_center{
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+.text_center{
+	text-align: center;
+}
+.whitefont{
+	color: white;
+}
+.redfont{
+	color: rgb(232, 84, 82);
+}
+.gap{
+	margin-top: 0.2rem;
+}
+.border{
+	border-style: solid;
+	border-width: 1px;
+}
+.bigbigfont{
+	font-size: 8rem;
+	line-height: 6rem;
+	margin-bottom: 1rem;
+}
+.bigfont{
+	font-size: 2rem;
+}
+.more{
+	display: table;
+	height: 100%;
+}
+.more>div{
+	height: 60%;
+}
+.more p{
+	width: 75%;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+}
+.more>div>div{
+	width: 20%;
+	padding: 0.3rem;
+	margin-top: 2rem;
+}
+.circle{
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	margin-left: 0.4rem;
+	margin-right: 0.4rem;
+	display: inline-block;
+}
+.gerybackground{
+	background-color: rgb(146, 146, 146);
+}
+div.lefttriangle{
+	width: 0;
+	height: 0;
+	border-width: 1rem 1.5rem;
+	border-style: solid;
+	border-color: transparent white transparent transparent;
+	position: absolute;
+	right: 0;
+	top: 45%;
+}
+div.righttriangle{
+	width: 0;
+	height: 0;
+	border-width: 1rem 1.5rem;
+	border-style: solid;
+	border-color: transparent transparent transparent white;
+	position: absolute;
+	left: 0;
+	top: 45%;
+}
+.join{
+	display: grid;
+	height: 40rem;
+	margin-bottom: 10rem;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "a a a"
+						 "items block block";
+}
+.become{
+	grid-column-start: a-start;
+	grid-column-end: a-end;
+}
+.become p{
+	width: 60%;
+	text-align: center;
+}
+.items{
+	justify-self: end;
+	width: 60%;
+}
+.items>div{
+	margin-bottom: 1.5rem;
+}
+.justify_right{
+	text-align: right;
+}
+.items_more{
+	line-height: 0;
+}
+.items_more:before{
+	content: "";
+	display: inline-block;
+	width: 0.7rem;
+	height: 0.4rem;
+	margin-right: 0.4rem;
+	background-image: url(images/下拉箭头.png);
+	background-size: 100% 100%;
+}
+.block{
+	display: grid;
+	grid-area: block;
+	width: 80%;
+	justify-self: center;
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, 1fr); 
+	grid-template-areas: "name age"
+						 "phone address"
+						 "life life"
+						 "life life"
+						 "life life"
+						 "submit submit" 
+}
+.block input, .block textarea{
+	background-color: rgb(237, 237, 239);
+	border-radius: 5px;
+	outline: none;
+	border-width: 0;
+	padding: 0.3rem;
+}
+.block textarea{
+	grid-area: life;
+}
+.block div{
+	grid-area: submit;
+	background-color: rgb(237, 237, 239);
+	text-align: center;
+	padding: 0.5rem;
+}
+.main{
+	display: flex;
+	width: 40%;
+	height: 80%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.main p{
+	text-align: center;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.main .email{
+	width: 100%;
+	margin-top: 2rem;
+}
+.email div{
+	width: 15%;
+	margin: 0;
+	height: 2rem;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	background-color: rgb(110, 113, 120);
+	padding: 0.3rem;
+	box-sizing: border-box;
+}
+.email input{
+	width: 85%;
+	height: 2rem;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	margin: 0;
+	vertical-align: middle;
+}
+.bottom{
+	background-color: rgb(47, 47, 56);
+	height: 20%;
+}
+.icon{
+	padding: 0;
+	margin-top: 1.5rem;
+}
+.icon li{
+	width: 1.3rem;
+	height: 1.3rem;
+	margin-left: 1.2rem;
+	margin-right: 1.2rem;
+	background-size: 100% 100%;
+	display: inline-block;
+}
+.qq{
+	background-image: url(images/qq.png);
+}
+.weibo{
+	background-image: url(images/weibo.png);
+}
+.twitter{
+	background-image: url(images/twitter.png);
+}
+.earth{
+	background-image: url(images/earth.png);
+}
+.bottom>div div{
+	display: inline-block;
+}
+.bottom>div{
+	height: 100%;
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
